@@ -1,5 +1,5 @@
 var str = prompt();
-var strRev = ""; // строка в обратном порядке
+var strRev = "";
 for (i = str.length-1; i >= 0; i--) {
     strRev += str[i];
 }
