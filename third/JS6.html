@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <style>
+        td{
+            padding:7px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>JS6</title>
+</head>
+<body>
+<div style="position:absolute; left:35%; top:5%">
+    <h1>Create a web-page</h1>
+<form>
+    <table>
+        <tr><td>Title</td><td>
+            <input type="text" id="title">
+        </td></tr>
+
+        <tr><td>Text</td><td>
+            <textarea cols="25" rows="5" id="text"></textarea>
+        </td></tr>
+
+        <tr><td>Background color</td><td>
+            <input type="radio" id="rad1" name="one">Yellow  <br>
+            <input type="radio" id="rad2" name="one" checked>White
+        </td></tr>
+
+        <tr><td>Text interval</td><td>
+            <input type="radio" id="rad3" name="two">Small  <br>
+            <input type="radio" id="rad4" name="two" checked>Big
+        </td></tr>
+
+        <tr><td>Title size</td><td>
+            <select>
+                <option id="opt1">Big</option>
+                <option id="opt2">Small</option>
+            </select>
+        </td></tr>
+
+        <tr><td>Image</td><td>
+            <select>
+                <option id="opt3">Sausages</option>
+                <option id="opt4">Cheese</option>
+            </select>
+        </td></tr>
+
+        <tr><td>Title features</td><td>
+            <input type="checkbox" id="ch1"> Bold <br>
+            <input type="checkbox" id="ch2"> Italic <br>
+            <input type="checkbox" id="ch3"> Underlined
+        </td></tr>
+
+        <tr><td></td><td>
+            <input type="reset" value="Reset">
+            <input type="button" value="Start" onclick="f()">
+        </td></tr>
+    </table>
+</form>
+</div>
+
+
+<script src="JS6.js"></script>
+</body>
+</html>

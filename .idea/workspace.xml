@@ -1,26 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e3bb88f4-2e48-4008-95b9-bce68f346f80" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/first/1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/first/JS.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/first/JS1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/first/JS3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/first/Test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/second/JS4.2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/second/JS4.2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/second/JS4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/second/JS4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/second/JS5.2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/second/JS5.2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/second/JS5.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/second/JS5.js" afterDir="false" />
+    <list default="true" id="e3bb88f4-2e48-4008-95b9-bce68f346f80" name="Default Changelist" comment="git commit -m &quot;1811&quot;">
+      <change afterPath="$PROJECT_DIR$/second/JS5.3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/second/JS5.3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/second/JS5.4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/second/JS5.4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/third/JS6.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/third/JS6.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/third/cheese.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/third/sausage.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JS.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JS1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JS3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/second/JS.3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/second/JS5.2.html" beforeDir="false" afterPath="$PROJECT_DIR$/second/JS5.2.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -97,7 +89,7 @@
       <updated>1573665352411</updated>
       <workItem from="1573665357110" duration="6075000" />
       <workItem from="1574025963951" duration="4401000" />
-      <workItem from="1574456151972" duration="4682000" />
+      <workItem from="1574456151972" duration="13982000" />
     </task>
     <task id="LOCAL-00001" summary="git commit -m &quot;1811&quot;">
       <created>1574030772346</created>
