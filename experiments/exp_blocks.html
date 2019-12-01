@@ -3,32 +3,85 @@
     <meta charset="UTF-8">
     <title>exp_blocks</title>
     <script>
-        /*function onl1(){
-            x=document.getElementById("i15")
-            x.style.display="none"
-        }*/
-        function onl() {
-            for (i=0; i<=310; i++){
-                var num="i"+i;
-                x=document.getElementById(num);
-                x.onmouseover="fun()"
-            }
+
+        function hand(){
+            this.src='red.png';
+	        count++;
+        }
+	
+	    function onl(name){
+	        x=document.getElementById(name);
+	        x.addEventListener('mouseover', hand);
+	    }
+	
+	    function cyc(){
+		    for (i=0; i<=35; i++){
+			    var num='i'+i;
+                onl(num);
+			    }
         }
     </script>
 </head>
-<body onload="onl()">
+<body onload="cyc()">
 <script>
-    /*for (i=0; i<=150; i++) {
-        var name = "";
-        name += "i" + i;
-        document.write("<img src='black.png' style='height:50px;width:50px;' id='"+name+"' onmouseover='f()'>");
+    var count=0;
+    document.write("<table>");
+    var idd=0;
+    for (i=0; i<=5; i++){
+        document.write("<tr>");
+        for (k=0; k<=5; k++){
+            document.write("<td>");
+            var name = "";
+            name += "i" + idd;
+            idd++;
+            document.write("<img src='black.png' style='height:50px;width:50px;' id='"+name+"'>");
+            document.write("</td>");
+        }
+        document.write("</tr>")
     }
-    document.write('<img style="width:50px;height:50px;" src="red.png">');*/
-    for (i=0; i<=312; i++) {
-        var name = "";
-        name += "i" + i;
-        document.write("<img src='black.png' style='height:50px;width:50px;' id='"+name+"'>");
+    document.write("</table>")
+</script>
+<script>
+    var fullcyc=false;
+    let forall=0;
+    function useless () {
+        if (forall<=35){
+            var nummm='i'+forall;
+            x=document.getElementById(nummm);
+            x.src="black.png";
+            forall++;
+            //setTimeout(useless, 40);
+            useless();
+        }
+        else{
+            forall=0;
+        }
+
+
     }
+    function mainloo() {
+
+        for (i=0; i<=35; i++) {
+            var numm='i'+i;
+            x=document.getElementById(numm);
+            var ifred = x.src.slice(-7);
+            if (ifred=='red.png') {
+                x.removeEventListener('mouseover', hand);
+            }
+            if (count==36){
+                fullcyc=true;
+                count=0;
+                break;
+            }
+        }
+        if (fullcyc==true){
+            cyc();
+            useless();
+            fullcyc=false;
+        }
+        setTimeout(mainloo, 20);
+    }
+    mainloo();
 </script>
 </body>
 </html>
