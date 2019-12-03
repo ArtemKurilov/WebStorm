@@ -1,8 +1,22 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>exp_blocks</title>
+
     <script>
+        const rows = 5;
+        const columns = 5;
+
+        const total = rows * columns;
+        //const top_p=((rows)*(52)+24)/2-158/2+2;
+        //const left_t=((columns)*(52)+52)/2-266/2+2;
+
+        let s=0;
+
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
 
         function hand(){
             this.src='red.png';
@@ -15,73 +29,81 @@
 	    }
 	
 	    function cyc(){
-		    for (i=0; i<=35; i++){
-			    var num='i'+i;
+		    for (let i=0; i<=(total-1); i++){
+			    let num='i'+i;
                 onl(num);
-			    }
+            }
         }
+
+        /*function paint_all() {
+            for (let i=0; i<=total-1; i++) {
+                let num = 'i' + i;
+                x = document.getElementById(num);
+                x.src = "red.png";
+            }
+            count=total-s;
+        } */
     </script>
+
 </head>
-<body onload="cyc()">
-<script>
-    var count=0;
-    document.write("<table>");
-    var idd=0;
-    for (i=0; i<=5; i++){
-        document.write("<tr>");
-        for (k=0; k<=5; k++){
-            document.write("<td>");
-            var name = "";
-            name += "i" + idd;
-            idd++;
-            document.write("<img src='black.png' style='height:50px;width:50px;' id='"+name+"'>");
-            document.write("</td>");
-        }
-        document.write("</tr>")
-    }
-    document.write("</table>")
-</script>
-<script>
-    var fullcyc=false;
-    let forall=0;
-    function useless () {
-        if (forall<=35){
-            var nummm='i'+forall;
-            x=document.getElementById(nummm);
-            x.src="black.png";
-            forall++;
-            //setTimeout(useless, 40);
-            useless();
-        }
-        else{
-            forall=0;
-        }
 
-
-    }
-    function mainloo() {
-
-        for (i=0; i<=35; i++) {
-            var numm='i'+i;
-            x=document.getElementById(numm);
-            var ifred = x.src.slice(-7);
-            if (ifred=='red.png') {
-                x.removeEventListener('mouseover', hand);
+<body style='margin: 2px' onload="cyc()">
+    <script>
+        /*document.write("<input type='button' style='position:absolute;height:158px;width:266px;top:"+top_p+"px;left:"+left_t+"px' value='RESET' onclick='paint_all()'>");
+        s=15
+         */
+        let count=0;
+        document.write("<table>");
+        let idd=0;
+        for (let i=0; i<=rows-1; i++){
+            document.write("<tr>");
+            for (let k=0; k<=columns-1; k++){
+                document.write("<td>");
+                let name = "";
+                name += "i" + idd;
+                idd++;
+                document.write("<img alt='black.png' src='black.png' style='height:50px;width:50px;' id='" + name + "'>");
+                document.write("</td>");
             }
-            if (count==36){
-                fullcyc=true;
-                count=0;
-                break;
+            document.write("</tr>")
+        }
+        document.write("</table>")
+    </script>
+
+    <script>
+        let full_cycle=false;
+
+        async function main_loop(){
+            for (let i=0; i<=total-1; i++) {
+                let number='i'+i;
+                x=document.getElementById(number);
+                let if_red = x.src.slice(-7);
+                if (if_red==='red.png') {
+                    x.removeEventListener('mouseover', hand);
+                }
+                if (count >= (total-s)){
+                    full_cycle=true;
+                    count=0;
+                }
+            }
+
+            if (full_cycle===true){
+                for (let for_all =0; for_all<=total-1; for_all++){
+                    let number_number='i'+for_all;
+                    x=document.getElementById(number_number);
+                    await sleep(20);
+                    x.src="black.png";
+                }
+                cyc();
+                full_cycle=false;
+            }
+            await sleep(1);
+            if (full_cycle===false){
+                await main_loop();
             }
         }
-        if (fullcyc==true){
-            cyc();
-            useless();
-            fullcyc=false;
-        }
-        setTimeout(mainloo, 20);
-    }
-    mainloo();
-</script>
+        main_loop();
+    </script>
 </body>
+
 </html>

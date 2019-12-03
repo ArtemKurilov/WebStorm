@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alex Lihtarev</title>
+</head>
+<body>
+<script>
+    var x= new Date();
+    y = new Array("Jan", "Feb", "Mar","Apr","May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov","Dec");
+    week = new Array("Sun", "Mon", "Tue", "Wen", "Fri", "Sat");
+    dd = x.getDay();
+    m = x.getMonth();
+    d = x.getDate();
+    d=parseInt(d)+1;
+    alert(d+" "+week[dd]+" "+y[m]+" 2019");
+</script>
+</body>
+</html>
