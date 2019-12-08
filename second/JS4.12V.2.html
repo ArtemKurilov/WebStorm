@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alex Lihtarev</title>
+</head>
+<body>
+<script>
+    function school() {
+        var x=prompt();
+        x=parseInt(x);
+        var c="";
+        if (x<=0){
+            c="Error"
+        }
+        else if (x<=7){
+            c="child";
+        }
+        else if (x<=25){
+            c="student";
+        }
+        else if (x<=65){
+            c="worker";
+        }
+        else {
+            c="retired";
+        }
+        s="<h3 style='text-align:center;}'>"+c+"</h3>";
+        return s;
+
+    }
+
+    function butt() {
+        y=school();
+        w=window.open("", "", "width:100, height:100");
+        w.document.open();
+        w.document.write(s);
+        w.document.close();
+    }
+</script>
+<div style="text-align: center">
+    <input type="button" value="OPEN" onclick="butt()">
+    <input type="button" value="CLOSE" onclick="w.close()">
+</div>
+</body>
+</html>
