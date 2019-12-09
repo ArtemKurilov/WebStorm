@@ -5,14 +5,26 @@
     <title>exp_blocks</title>
 
     <script>
-        const rows = 5;
-        const columns = 5;
+        const rows = 11;
+        const columns = 26;
 
         const total = rows * columns;
-        //const top_p=((rows)*(52)+24)/2-158/2+2;
-        //const left_t=((columns)*(52)+52)/2-266/2+2;
+        let top_p=4+(rows/2)*52-52;
+        let left_t=4+(columns/2)*52-52;
+        let hei=102;
+        let wid=102;
+        let s=4;
 
-        let s=0;
+        if (rows%2===1){
+            top_p+=26;
+            hei-=52;
+            s=s/2;
+        }
+        if (columns%2===1){
+            left_t+=26;
+            wid-=52;
+            s=s/2;
+        }
 
         function sleep(ms) {
             return new Promise(resolve => setTimeout(resolve, ms));
@@ -35,30 +47,28 @@
             }
         }
 
-        /*function paint_all() {
+        function paint_all() {
             for (let i=0; i<=total-1; i++) {
                 let num = 'i' + i;
                 x = document.getElementById(num);
                 x.src = "red.png";
             }
             count=total-s;
-        } */
+        }
     </script>
 
 </head>
 
 <body style='margin: 2px' onload="cyc()">
     <script>
-        /*document.write("<input type='button' style='position:absolute;height:158px;width:266px;top:"+top_p+"px;left:"+left_t+"px' value='RESET' onclick='paint_all()'>");
-        s=15
-         */
+        document.write("<input id='button' type='button' style='font-size:13px;padding:0;position:absolute;height:"+hei+"px;width:"+wid+"px;top:"+top_p+"px;left:"+left_t+"px' value='RESET' onclick='paint_all()'>");
         let count=0;
         document.write("<table>");
         let idd=0;
         for (let i=0; i<=rows-1; i++){
             document.write("<tr>");
             for (let k=0; k<=columns-1; k++){
-                document.write("<td>");
+                document.write("<td style='padding:0;'>");
                 let name = "";
                 name += "i" + idd;
                 idd++;
@@ -69,7 +79,6 @@
         }
         document.write("</table>")
     </script>
-
     <script>
         let full_cycle=false;
 
@@ -91,7 +100,7 @@
                 for (let for_all =0; for_all<=total-1; for_all++){
                     let number_number='i'+for_all;
                     x=document.getElementById(number_number);
-                    await sleep(20);
+                    await sleep(5);
                     x.src="black.png";
                 }
                 cyc();

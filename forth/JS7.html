@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS7</title>
+    <script>
+        function f() {
+            x=document.getElementById("p");
+            x.style.display='none';
+            y=document.getElementById("button");
+            y.value="I'M OK....................................."
+        }
+
+        function ff() {
+            x=document.getElementById("p");
+            x.style.display='block';
+            y=document.getElementById("button");
+            y.value="HOW DO YOU DO?"
+        }
+
+        function picc(s){
+            x=document.getElementById("pic")
+            if (s=="cat"){
+                pic.src="cat.jpg"
+            }
+            if (s=="dog"){
+                pic.src="dog.jpg"
+            }
+            if (s=="cow"){
+                pic.src="cow.jpg"
+            }
+        }
+
+    </script>
+</head>
+<body>
+<table>
+    <tr>
+        <td style="width:200px;height:200px"><p id="p">HELLO</p></td>
+        <td style="width:200px;height:200px"><input id="button" type="button" onmouseover="f()" onmouseout="ff()" value="HOW DO YOU DO?"></td>
+    </tr>
+</table>
+
+<img style="height:400px;width:400px" id="pic" src="cat.jpg">
+<input type="button" onclick="picc('cat')" value="cat">
+<input type="button" onclick="picc('dog')" value="dog">
+<input type="button" onclick="picc('cow')" value="cow">
+</body>
+</html>

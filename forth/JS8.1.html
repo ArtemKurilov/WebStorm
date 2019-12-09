@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS8.1</title>
+    <script>
+        let count=1;
+        let co=1;
+        function f() {
+            y=document.getElementById("button");
+            ellem=document.getElementsByTagName("img");
+            if (count%2==1){
+                for (i=0; i<ellem.length; i++) {
+                    ellem[i].style.width = "100px"
+                }
+                y.value="100%";
+                count+=1
+            }
+            else{
+                for (i=0; i<ellem.length; i++) {
+                    ellem[i].style.width = "200px"
+                }
+                y.value="50%";
+                count++
+            }
+        }
+
+        function check() {
+            x=document.getElementById("che")
+            if (co%2==1){
+                x.style.display="none"
+            }
+            else{
+                x.style.display="block"
+            }
+            co++
+        }
+
+        function coffee() {
+            x=document.getElementById("h");
+            x.innerHTML="<img style='height: 200px; width: 200px' src='coffee.jpg'><p style='text-decoration: underline'>ЖИВОТНЫЕ КОТОРЫЕ ЛЮБЯТ КОФЕ</p>"
+        }
+    </script>
+</head>
+<body>
+<h1 id="h" style="text-align:center">ЖИВОТНЫЕ КОТОРЫЕ ЛЮБЯТ КОФЕ</h1>
+    <img style="height:200px;width:200px" src="dog.jpg">
+    <img style="height:200px;width:200px" src="cat.jpg">
+    <img style="height:200px;width:200px" src="cow.jpg"> <br>
+    <input id="button" type="button" value="50%" onclick="f()">
+    <input type="button" value="КОФЕ" onclick="coffee()"> <br> <br>
+<p> СПРЯТАТЬ МУЖЧИНУ???</p>
+<input type="checkbox" onchange="check()"><br>
+<img style='height: 200px; width: 200px' id="che" src="coffee.jpg">
+</body>
+</html>
