@@ -15,14 +15,13 @@ function school() {
     }
     s="<h3 style='text-align:center;}'>"+c+"</h3>";
     return s;
-
 }
 
 function butt() {
     y=school();
     w=window.open("", "", "width:100, height:100");
     w.document.open();
-    w.document.write(s);
+    w.document.write(y);
     w.document.close();
 }
 
