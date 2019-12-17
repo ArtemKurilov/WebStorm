@@ -1,0 +1,27 @@
+<html>
+<head>
+<script>
+function f(){
+x=document.getElementById(m);
+s=x.value.split(" ")
+mi=Math.min.apply(Math, s);
+for (i=s.length-1; i>=0; i--){
+s[i]=parseInt(s[i]);
+if ((s[i]<0) && (s[i]>=mi)){
+mi=s[i];
+ind=i;
+}
+}
+alert('value '+mi);
+alert('index '+ind);
+}
+</script>
+</head>
+<body>
+<input type="text" id="a" onload="ope()"> <br> <br>
+<input style="width:400px;height:400px" type="button" value="(:" onclick="f()">  
+<script>
+m="a";                                                                                     
+</script>
+</body>
+</html>
